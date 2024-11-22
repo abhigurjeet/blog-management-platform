@@ -4,7 +4,7 @@ const GetDummyData = (props) => {
   const [data, setData] = useState({});
   useEffect((effect) => {
     axios
-      .get("http://localhost:3001")
+      .get(process.env.REACT_APP_API_URL)
       .then((res) => {
         setData(res.data);
         console.log(res);
