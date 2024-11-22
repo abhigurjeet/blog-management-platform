@@ -1,4 +1,10 @@
+#Backend related files and folders
+
 backend/node_modules
 backend/package-lock.json
+
+
+#Frontend related files and folders
+
 frontend/node_modules
 frontend/package-lock.json
