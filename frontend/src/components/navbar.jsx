@@ -28,8 +28,8 @@ const Navbar = () => {
   };
   return (
     <div className="bg-[rgb(211,211,211)] decoration-black flex flex-col justify-between rounded w-[15%] h-screen text-center fixed ">
-      <div className="font-black h-[10%] flex justify-center items-center text-xl ">
-        <FontAwesomeIcon icon={faComments} className="mr-2" />
+      <div className="font-black h-[10%] flex justify-center items-center text-xl max-sm:flex max-sm:flex-col">
+        <FontAwesomeIcon icon={faComments} className="mr-2 " />
         {"  "}Blogs
       </div>
       <div className="h-[40%] flex flex-col justify-evenly items-center">
@@ -37,7 +37,7 @@ const Navbar = () => {
           onClick={() => {
             navigate("/");
           }}
-          className="text-black font-bold hover:text-white hover:bg-black hover:rounded-2xl hover:w-[90%] py-2 text-l"
+          className="text-black font-bold hover:text-white hover:bg-black hover:rounded-2xl hover:w-[90%] py-2 text-l max-sm:w-[90%]"
         >
           <FontAwesomeIcon icon={faHome} className="mr-2" />
           {"  "}Home
@@ -46,23 +46,23 @@ const Navbar = () => {
           onClick={() => {
             navigate("/create");
           }}
-          className="text-black font-bold hover:text-white hover:bg-black hover:rounded-2xl hover:w-[90%] py-2 text-l"
+          className="text-black font-bold hover:text-white hover:bg-black hover:rounded-2xl hover:w-[90%] py-2 text-l max-sm:w-[90%]"
         >
           <FontAwesomeIcon icon={faPlus} className="mr-2" />
           {"  "}Create
         </div>
-        <div className="text-black font-bold hover:text-white hover:bg-black hover:rounded-2xl hover:w-[90%] py-2 text-l">
+        <div className="text-black font-bold hover:text-white hover:bg-black hover:rounded-2xl hover:w-[90%] py-2 text-l max-sm:w-[90%]">
           <FontAwesomeIcon icon={faUsers} className="mr-2" />
           {"  "}Authors
         </div>
-        <div className="text-black font-bold hover:text-white hover:bg-black hover:rounded-2xl hover:w-[90%] py-2 text-l">
+        <div className="text-black font-bold hover:text-white hover:bg-black hover:rounded-2xl hover:w-[90%] py-2 text-l max-sm:w-[90%]">
           <FontAwesomeIcon icon={faClock} className="mr-2" />
           {"  "}Search
         </div>
       </div>
 
       <div
-        className="font-black h-[10%] flex justify-center items-center text-l hover:text-xl cursor-pointer"
+        className="font-black h-[10%] flex justify-center items-center text-l hover:text-xl cursor-pointer max-sm:w-[90%] max-sm:font-bold "
         onClick={() => {
           if (isLoggedIn || localStorage.getItem("authToken")) {
             handleSignOut();
